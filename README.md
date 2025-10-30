@@ -5,8 +5,9 @@ This directory contains the static assets deployed to GitHub Pages for the City 
 - `index.html` / `404.html`: SPA entry points generated via SvelteKit.
 - `_app/`: hashed JS/CSS bundles produced by `npm run build`.
 - `optimized-cities/`: 640px WebP thumbnails used by the voting UI.
+- `favicon.png`: 1×1 placeholder served to avoid 404s.
 
-## Refreshing the bundle
+## Refresh workflow
 
 ```bash
 cd /Users/romanchadnov/city_pruner/city-voting-svelte
@@ -17,8 +18,6 @@ rsync -a --delete --exclude='.git/' build/ github-release/
 cp github-release/index.html github-release/404.html
 cd github-release
 touch .nojekyll
-git add .
-git commit -m "build: update static bundle"
 ```
 
-The source city metadata now lives under `data/cities/` and only optimised thumbnails are shipped.
+Commit and push from inside `github-release/` once the bundle is refreshed.
