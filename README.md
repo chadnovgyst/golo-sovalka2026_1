@@ -3,9 +3,9 @@
 This directory contains the static assets deployed to GitHub Pages for the City Preference Voting app.
 
 - `index.html` / `404.html`: SPA entry points generated via SvelteKit.
-- `_app/`: hashed JS/CSS bundles produced by `npm run build`.
+- `_app/`: hashed JS/CSS bundles produced via `npm run build`.
 - `optimized-cities/`: 640px WebP thumbnails used by the voting UI.
-- `favicon.png`: 1×1 placeholder served to avoid 404s.
+- `favicon.png`: 1×1 placeholder to avoid 404s.
 
 ## Refresh workflow
 
