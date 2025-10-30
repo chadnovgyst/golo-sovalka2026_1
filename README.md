@@ -11,7 +11,6 @@ This directory contains the static assets deployed to GitHub Pages for the City 
 
 ```bash
 cd /Users/romanchadnov/city_pruner/city-voting-svelte
-python3 tools/build_thumbnails.py
 node tools/build_city_manifest.mjs
 BASE_PATH=golo-sovalka2026_1 npm run build
 rsync -a --delete --exclude='.git/' build/ github-release/
